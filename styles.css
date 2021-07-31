@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: aliceblue;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+span{
+    padding: 0.5rem;
+    border: 4px solid yellow;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    padding-top: 4rem;
+    background: azure;
+}
+
+.container h1{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.container .samples{
+    width: 90%;
+    height: auto;
+    margin: 5rem auto;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .samples .sample_item{
+    width: auto;
+    height: 80px;
+    padding: 1rem 1rem;
+    background: linear-gradient(150deg, rgb(216, 48, 18), rgb(1, 15, 145));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.container .samples .sample_item:hover{
+    box-shadow: 5px 5px 10px rgba(255, 22, 22, 0.5), -5px -5px 15px rgba(58, 13, 13, 0.5);
+}
+
+.samples a{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
