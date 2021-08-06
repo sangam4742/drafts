@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+
+.container{
+    position: absolute;
+    min-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container #scene .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100vh;
+}
+
+.container #scene .layer img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.moon{
+    padding: 6rem;
+    margin-top: -1rem;
+    object-fit: contain !important;
+    transform: rotateZ(150deg);
+    filter: brightness(50%);
+}
+
+.heroheading{
+    font-family: 'Aclonica', sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 30vh 35vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.heroheading p{
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background: black;
+    border: 1px solid yellow;
+    padding: 1rem 0.5rem;
+}
+
+.heroheading p span{
+    animation: daynight 3s infinite 0s linear;
+}
+
+@keyframes daynight {
+    0%{
+        filter: hue-rotate(90deg);
+    }
+    25%{
+        filter: hue-rotate(180deg);
+    }
+    50%{
+        filter: hue-rotate(270deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.heroheading h1{
+    position: relative;
+    margin-left: -4.8rem;
+    font-size: 100px;
+    text-align: center;
+}
+
+
+@media (max-width: 780px) {
+    .moon{
+        padding: 10rem;
+        margin-left: -7rem;
+        margin-top: -3rem;
+    }
+
+    .heroheading{
+        padding: 30vh 5vw;
+    }
+
+    .mainhead{
+        width: 95vw;
+        padding: 0 auto !important;
+    }
+
+    .heroheading h1{
+        font-size: 3.75rem;
+        margin-left: 0;
+    }
+}
