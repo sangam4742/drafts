@@ -49,7 +49,7 @@
     font-family: 'Aclonica', sans-serif;
     width: 100%;
     height: 100vh;
-    padding: 30vh 35vw;
+    padding: 22.5vh 32vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,11 +57,13 @@
 }
 
 .heroheading p{
-    font-family: sans-serif;
+    font-family: cursive;
     font-size: 20px;
     text-align: center;
     background: black;
-    border: 1px solid yellow;
+    box-shadow: 5px 5px 10px rgb(0,0,0);
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
     padding: 1rem 0.5rem;
 }
 
@@ -86,13 +88,122 @@
 
 .heroheading h1{
     position: relative;
-    margin-left: -4.8rem;
     font-size: 100px;
     text-align: center;
 }
 
+.greetings-section{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
 
-@media (max-width: 780px) {
+.neonbg{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    animation: neon 10s infinite 0s ease-in-out;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+}
+
+.greetings{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+}
+
+.greetings h1{
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 8rem;
+}
+
+.greetings .msg{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.circle{
+    height: 300px;
+    width: 300px;
+    display: grid;
+    place-content: center;
+    border: 8px solid #fff;
+    border-radius: 50%;
+}
+
+.greetings .msg img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.greetings .msg p{
+    max-width: 50rem;
+    height: auto;
+    color: #fff;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+@keyframes neon {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    20%{
+        filter: hue-rotate(90deg);
+    }
+    40%{
+        filter: hue-rotate(120deg);
+    }
+    60%{
+        filter: hue-rotate(180deg);
+    }
+    80%{
+        filter: hue-rotate(270deg);
+    }
+    100%{
+        filter: hue-rotate(350deg);
+    }
+}
+
+
+.grid{
+    position: relative;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(6, 0, 63);
+}
+
+
+@media (max-width: 765px) {
     .moon{
         padding: 10rem;
         margin-left: -7rem;
@@ -111,5 +222,13 @@
     .heroheading h1{
         font-size: 3.75rem;
         margin-left: 0;
+    }
+
+    .neonbg, .overlay{
+        height: 200vh;
+    }
+
+    .circle{
+        margin-bottom: 4rem;
     }
 }

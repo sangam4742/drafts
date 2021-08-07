@@ -27,18 +27,56 @@
                     <img src="/drafts/assets/img/mountain.png" class="mountain">
                 </div>
                 <div class="heroheading">
-                    <p>Happy Bith<span style="font-weight: bold; color: yellow;">day</span> to the one who loves <span style="font-weight: bold; color: rgb(139, 97, 255);">Night</span> !</p>
+                    <p>Happy Birth<span style="font-weight: bold; color: yellow;">day</span> to the one who loves <span style="font-weight: bold; color: rgb(139, 97, 255);">Night</span> !</p>
                     <br>
-                    <div class="mainhead"><h1>Nyctophile<br>sis</h1></div>
+                    <div class="mainhead"><h1>dear<br>Nyctophile<br>sis</h1></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="greetings-section">
+        <img src="/drafts/assets/img/neon.jpg" class="neonbg">
+        <div class="overlay"></div>
+
+        <div class="greetings">
+            <h1>Special Greetings</h1>
+            <div class="msg">
+                <div class="circle"> <img src="/drafts/assets/img/panda.png" class="panda"> </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis laboriosam, voluptas aliquam aliquid expedita natus et maiores omnis voluptatum sed, nisi nam quaerat autem dolorem cumque vel accusamus hic odio?
+                    <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    
+        <div class="grid">
+            <img src="" class="grid-item">
+            <img src="" class="grid-item">
+            <img src="" class="grid-item">
+            <img src="" class="grid-item">
+            <img src="" class="grid-item">
+            <img src="" class="grid-item">
+        </div>
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script>
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);
     </script>
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+
+        $('.grid').masonry({
+            
+            itemSelector: '.grid-item',
+            columnWidth: 200
+        });
+
+    </script>
+
 </body>
 </html>
