@@ -231,4 +231,8 @@
     .circle{
         margin-bottom: 4rem;
     }
+    
+    .grid{
+        top: 200vh;
+    }
 }
