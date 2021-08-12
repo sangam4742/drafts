@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 *{
     margin: 0;
@@ -93,9 +94,12 @@
 }
 
 .greetings-section{
-    position: absolute;
+    position: relative;
+    margin-top: auto;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .neonbg{
@@ -115,60 +119,42 @@
     backdrop-filter: blur(8px);
 }
 
-.greetings{
+.greetings-section h1{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding-top: 2rem;
-}
-
-.greetings h1{
-    color: #fff;
-    font-size: 5rem;
+    top: 1rem;
+    left: 35%;
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: 8rem;
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
 }
 
-.greetings .msg{
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
+.box{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    height: 80vh;
+    padding: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.circle{
-    height: 300px;
-    width: 300px;
-    display: grid;
-    place-content: center;
-    border: 8px solid #fff;
-    border-radius: 50%;
-}
-
-.greetings .msg img{
-    height: 250px;
+.box img{
     width: 250px;
-    object-fit: cover;
+    height: 250px;
     border-radius: 50%;
+    margin: 1rem;
 }
 
-.greetings .msg p{
-    max-width: 50rem;
-    height: auto;
-    color: #fff;
-    font-size: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(4px);
-    padding: 2rem;
+.box p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 1rem 0.75rem;
     border-radius: 15px;
+    color: #fff;
 }
 
 @keyframes neon {
@@ -193,15 +179,36 @@
 }
 
 
-.grid{
-    position: relative;
-    top: 100vh;
-    left: 0;
+.memories{
+    margin-top: auto;
     width: 100%;
-    height: 100vh;
-    background: rgb(6, 0, 63);
+    height: auto;
+    background: radial-gradient(rgb(69, 103, 255), rgb(35, 35, 255), rgb(0, 23, 128));
+    color: #fff;
 }
 
+.memories h1{
+    padding-top: 2rem;
+    font-family: 'Popins', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.grid{
+    display: flex;
+}
+
+.grid .grid-col{
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.grid-item img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
 @media (max-width: 765px) {
     .moon{
@@ -225,14 +232,19 @@
     }
 
     .neonbg, .overlay{
-        height: 200vh;
-    }
-
-    .circle{
-        margin-bottom: 4rem;
+        height: 325vh;
     }
     
-    .grid{
-        top: 200vh;
+    .box{
+        top: 10%;
+        flex-direction: column;
+    }
+
+    .greetings-section h1{
+        left: 0%;
+    }
+
+    .grid-col--2, .grid-col--3{
+        display: none;
     }
 }
