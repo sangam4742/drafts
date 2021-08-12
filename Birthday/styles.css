@@ -208,6 +208,14 @@
     height: auto;
     object-fit: cover;
     border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.grid-item img:hover{
+    transform: scale(1.1);
+    z-index: 5;
+    box-shadow: 5px 5px 10px rgb(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 @media (max-width: 765px) {
@@ -232,7 +240,7 @@
     }
 
     .neonbg, .overlay{
-        height: 310vh;
+        height: 325vh;
     }
     
     .box{
